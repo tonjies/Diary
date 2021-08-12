@@ -9,6 +9,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
@@ -37,7 +42,30 @@
       <updated>1628762112906</updated>
       <workItem from="1628762114194" duration="556000" />
       <workItem from="1628762791130" duration="23000" />
+      <workItem from="1628762815438" duration="209000" />
     </task>
+    <task id="LOCAL-00001" summary="commit">
+      <created>1628762851292</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1628762851292</updated>
+    </task>
+    <task id="LOCAL-00002" summary="commit">
+      <created>1628762924713</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1628762924713</updated>
+    </task>
+    <task id="LOCAL-00003" summary="commit">
+      <created>1628762984360</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1628762984360</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
