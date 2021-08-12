@@ -60,7 +60,7 @@
 				 	console.log("按钮变色")
 					//请求登录接口
 					uni.request({
-						url:'http://127.0.0.1:7001/user/login',
+						url:'http://192.168.31.40:7002/user/login',
 						method:'POST',
 						data:{
 							'username':this.username,

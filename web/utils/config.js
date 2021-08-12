@@ -3,7 +3,7 @@
  * 配置文件
  */
 const config={
-	apiBaseUrl:'http://127.0.0.1:7001'
+	apiBaseUrl:'http://192.168.31.40:7002'
 }
 
 export {
