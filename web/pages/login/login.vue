@@ -27,6 +27,7 @@
 <script>
 	import xCaption from '@/components/x-caption.vue';
 	import store from '@/store/index.js'   
+	import {Http} from '@/utils/http.js'
 	export default {
 		 data(){
 			 return{
@@ -54,42 +55,40 @@
 					this.buttonIsDark=false
 				}
 			 },
+			 login:async function(){
+				//请求登录接口
+				 var res=await Http.request(
+					{	
+						url:"/user/login",
+						data:{'username':this.username,'password':this.password}}
+				)
+				console.log(res)
+				if(res.status){
+					//存储token到本地指定的key中，跳转到主界面
+					uni.setStorage({
+						key:'token',
+						data:res.body.token,
+						success: function () {
+						     console.log('保存token成功');
+						}
+					})
+					uni.navigateTo({
+						url:'../home/home'
+					})
+				}else{
+					//弹出错误提示
+					uni.showToast({
+					    title: res.data.msg,
+					    duration: 2000
+					});
+				}
+			 },
 			 //登录
 			 click:function(event){
 				 if(this.username!=""&&this.password!=""){
 				 	console.log("按钮变色")
 					//请求登录接口
-					uni.request({
-						url:'http://192.168.31.40:7002/user/login',
-						method:'POST',
-						data:{
-							'username':this.username,
-							'password':this.password
-						},
-						success:(res)=>{
-							console.log(res)
-							if(res.data.status){
-								//存储token到本地指定的key中，跳转到主界面
-								// store.commit('savetoken',res.data.body.token)
-								uni.setStorage({
-									key:'token',
-									data:res.data.body.token,
-									success: function () {
-									     console.log('保存token成功');
-									}
-								})
-								uni.navigateTo({
-									url:'../home/home'
-								})
-							}else{
-								//弹出错误提示
-								uni.showToast({
-								    title: res.data.msg,
-								    duration: 2000
-								});
-							}
-						}
-					})
+					this.login()
 				 }
 			 }
 		 }
