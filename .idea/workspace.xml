@@ -36,6 +36,7 @@
       <option name="presentableId" value="Default" />
       <updated>1628762112906</updated>
       <workItem from="1628762114194" duration="556000" />
+      <workItem from="1628762791130" duration="23000" />
     </task>
     <servers />
   </component>
@@ -52,6 +53,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="服务端" />
