@@ -1,0 +1,170 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.main.data-v-92bb8f34 {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.header.data-v-92bb8f34 {
+  width: 100%;
+  background-color: #FFFFFF;
+}
+.list.data-v-92bb8f34 {
+  width: 100%;
+  overflow: scroll;
+}
+.list .doc-list.data-v-92bb8f34 {
+  margin-top: 17rpx;
+  margin-left: 8rpx;
+  margin-right: 19rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+}
+.list .doc-list .hint-line.data-v-92bb8f34 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  width: 93rpx;
+  height: 229rpx;
+}
+.list .doc-list .hint-line .hint-logo.data-v-92bb8f34 {
+  width: 93rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.list .doc-list .hint-line .hint-logo .logo-size.data-v-92bb8f34 {
+  width: 29rpx;
+  height: 29rpx;
+}
+.list .doc-list .hint-line .hint-logo .center-line.data-v-92bb8f34 {
+  width: 1px;
+  height: 183rpx;
+  background-color: #707070;
+  margin-top: 15rpx;
+}
+.list .doc-list .content.data-v-92bb8f34 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.list .doc-list .content .item-date.data-v-92bb8f34 {
+  color: #707070;
+  margin-top: -7rpx;
+}
+.list .doc-list .content .item-title.data-v-92bb8f34 {
+  margin-top: 33rpx;
+  font-size: 27rpx;
+}
+.list .doc-list .content .item-content.data-v-92bb8f34 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 27rpx;
+  margin-top: 38rpx;
+}
+.draw-view.data-v-92bb8f34 {
+  width: 583rpx;
+  height: 100%;
+  background-color: #FFFFFF;
+}
+.draw-view .draw-header.data-v-92bb8f34 {
+  height: 350rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.draw-view .draw-header .draw-logo.data-v-92bb8f34 {
+  width: 121rpx;
+  height: 121rpx;
+  border-radius: 400rpx;
+  margin-top: 65rpx;
+  margin-left: 33rpx;
+}
+.draw-view .draw-header .user.data-v-92bb8f34 {
+  margin-top: 108rpx;
+  margin-left: 29rpx;
+  font-weight: bold;
+}
+.draw-view .draw-line.data-v-92bb8f34 {
+  height: 2rpx;
+  width: 583rpx;
+  background-color: #C2C2C2;
+  margin-top: 350prpx;
+}
+.draw-view .draw-option.data-v-92bb8f34 {
+  width: 585rpx;
+  height: 98rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.draw-view .draw-option .logo-logout.data-v-92bb8f34 {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 31rpx;
+}
+.draw-view .draw-option .text-logout.data-v-92bb8f34 {
+  color: #707070;
+  font-size: 29rpx;
+  margin-left: 25rpx;
+}
+
