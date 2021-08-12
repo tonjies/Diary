@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53897fee-52a6-49ea-9531-259de35ca5bc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/web/pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/login/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/login/login.vue" afterDir="false" />
+    <list default="true" id="53897fee-52a6-49ea-9531-259de35ca5bc" name="Default Changelist" comment="commit">
+      <change afterPath="$PROJECT_DIR$/server/init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="ba609a2f-ad66-433e-980d-4f0b9cd03107" name="Revert &quot;提交一&quot;" comment="Revert &quot;提交一&quot;&#10;&#10;This reverts commit 8cee92c4" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +21,9 @@
     <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="ProjectId" id="1wce4Rd5OIwX7dXQ7csHMyWa1j6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -46,7 +49,6 @@
       <workItem from="1628762114194" duration="556000" />
       <workItem from="1628762791130" duration="23000" />
       <workItem from="1628762815438" duration="209000" />
-      <workItem from="1628765250612" duration="16000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1628762851292</created>
