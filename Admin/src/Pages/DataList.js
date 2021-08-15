@@ -3,14 +3,20 @@ import React, {useEffect, useState} from 'react';
 import { Table } from 'antd';
 import axios from "axios";
 import servicePath from "../config/apiUrl";
-
+import Http from "../util/http"
 const { confirm } = Modal;
 
 function extracted(setList) {
+    const token = localStorage.getItem('token');
     axios({
         method: 'post',
-        url: servicePath.getUserList
+        url: servicePath.getUserList,
+        headers: {'token': token}
     }).then(res => {
+        console.log(res)
+        if(res.data.code==401){
+            message.error('登录过期，请重新登录');
+        }
         let list = res.data.body
         const userlist = new Array();
         for (let i = 0; i < list.length; i++) {
@@ -55,18 +61,24 @@ function DataList(props) {
             onCancel() {},
             onOk() {
                 console.log("onOk")
-                axios({
-                    method:'post',
-                    url:servicePath.deleteUser,
-                    data:{
-                        id:userlist[record].userId
-                    }
-                }).then(res=>{
-                    console.log(res)
-                    if(res.data.status==true){
-                        extracted(setList)
-                    }
-                })
+                const res = Http.request({url: servicePath.deleteUser, data: {id: userlist[record].userId}});
+                console.log(res)
+                // axios({
+                //     method:'post',
+                //     url:servicePath.deleteUser,
+                //     data:{
+                //
+                //     },
+                //     headers: {'token': token}
+                // }).then(res=>{
+                //     console.log(res)
+                //     if(res.data.code==401){
+                //         message.error('登录过期，请重新登录');
+                //     }
+                //     if(res.data.status==true){
+                //         extracted(setList)
+                //     }
+                // })
             }
         });
     }

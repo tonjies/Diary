@@ -27,17 +27,17 @@ function Login(props) {
         {
             console.log('url地址:')
         }
-        alert(servicePath.getUserList,)
         axios({
             method:'post',
-            url:servicePath.getUserList,
+            url:servicePath.login,
             data:dataProps
         }).then(res => {
+            console.log('登录成功1')
             console.log(res.data)
+            console.log('登录成功2')
             setIsLoading(false)
-            if(res.data.data='登录成功'){
-                localStorage.setItem('openId',res.data.openId)
-                console.log('登录成功')
+            if(res.data.status==true){
+                localStorage.setItem('token',res.data.body.token)
                 props.history.push('/index')
             }else {
                 message.error('用户名密码错误')

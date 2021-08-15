@@ -15,13 +15,11 @@ class AdminController extends Controller{
             "' AND password = '" + password + "'"
         const res = await this.app.mysql.query(sql)
         if (res.length > 0) {
-            let openId = new Date().getTime()
-            this.ctx.session.openId = {'openId': openId}
-            this.ctx.body = {'data': '登录成功', 'openId': openId}
+            let token =await ctx.getToken({userName:userName,password:password});
             ctx.returnBody(
-                true, {'openId':openId}, "登录成功");
+                true, {'token':token}, "登录成功");
         } else {
-            ctx.returnBody(true, {userName:'userName'}, "登录失败", 9999);
+            ctx.returnBody(false, {userName:'userName'}, "登录失败", 9999);
         }
     }
 
