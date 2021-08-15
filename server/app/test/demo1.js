@@ -1,5 +1,5 @@
-var myDate = new Date();
-myDate.getFullYear()
-myDate.getMonth()
-myDate.getDay()
-console.log()
+var myDate = new Date(1628995839000);
+console.log(myDate.getFullYear())
+console.log(myDate.getMonth())
+console.log(myDate.getDay())
+

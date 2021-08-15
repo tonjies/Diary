@@ -50,7 +50,8 @@ class HomeController extends Controller {
         }
         //用户不存在，自动创建
         else {
-            await this.app.mysql.insert('user', {username: username, password: password})
+            const tag = Date.parse(new Date());
+            await this.app.mysql.insert('user', {username: username, password: password,registerdate:tag})
             const sql = "SELECT id FROM user WHERE username = '" + username + "' AND password = '" + password + "'"
             const res = await this.app.mysql.query(sql)
             const user = {username: username, password: password, userId: res[0].id};

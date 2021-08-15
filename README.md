@@ -1,6 +1,6 @@
 #### 软件介绍
 
-这是一个笔记App，主要使用的技术是uniapp+egg.js+react
+这是一个笔记App，主要使用的技术是uniapp+egg.js
 
 软件预览图片：
 
@@ -79,6 +79,5 @@ exports.jwt={
 - 项目要先运行server程序（npm run dev)，再运行web端（HBuilder，运行，运行到浏览器），要注意自己本地实际运行起来后的端口，如果server运行起来后端口不是7001，则应该到web文件夹中，util/config中进行配置
 - diary.xd为项目设计文件，可以下载AdobeXd打开并使用蓝湖进行上传标注
 
+![微信截图_20210813011535](D:\work\project\xiaji\UIDesign\微信截图_20210813011535.png)
 
-
-- server下有个init.sql

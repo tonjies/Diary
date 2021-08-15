@@ -1,0 +1,14 @@
+
+
+
+.login-div{
+    margin: 120px auto;
+    width: 400px;
+}
+body{
+    background-color: #f0f0f0;
+}
+.slider{
+    position: fixed!important;
+    height: 3000px;
+}
