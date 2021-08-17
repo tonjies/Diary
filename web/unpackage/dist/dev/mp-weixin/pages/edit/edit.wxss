@@ -42,14 +42,13 @@
 }
 .header.data-v-0fa9cb46 {
   width: 100%;
-  background-color: #FFFFFF;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
+  height: 100rpx;
+  z-index: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 8rpx;
 }
 .header .input-title.data-v-0fa9cb46 {
   font-size: 38rpx;
@@ -67,16 +66,25 @@
   height: 1rpx;
   width: 675rpx;
 }
-.edit.data-v-0fa9cb46 {
-  width: 100%;
-  overflow: scroll;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
+.option-button.data-v-0fa9cb46 {
+  z-index: 10;
 }
-.edit .textarea.data-v-0fa9cb46 {
-  height: auto;
+.textarea.data-v-0fa9cb46 {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
   width: 675rpx;
   margin: 0 auto;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+}
+.optionLogo.data-v-0fa9cb46 {
+  border-radius: 600rpx;
+  width: 88rpx;
+  height: 88rpx;
+  position: absolute;
+  bottom: 77rpx;
+  right: 52rpx;
 }
 

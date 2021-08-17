@@ -1,6 +1,7 @@
 
 import store from '../store/index.js'
 import {config} from "./config.js";
+
 class Http{
 	
 	static async request({
@@ -8,9 +9,9 @@ class Http{
 		data
 	}){
 		console.log('发起网络请求')
-	
 		const value = uni.getStorageSync('token');
-		console.log("同步获取到的token:"+value)
+		var token=store.state.token 
+		console.log("同步获取到的token:"+token)
 		//请求列表数据
 		var [error, res] = await uni.request({
 			url:`${config.apiBaseUrl}${url}`,
@@ -20,6 +21,7 @@ class Http{
 				'token':value
 			}
 		})
+		console.log(res)
 		if(res.data.status){
 			return res.data
 		}else{

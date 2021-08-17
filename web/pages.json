@@ -25,10 +25,12 @@
 		   }
 		},
 		{
-		    "path" : "pages/edit/edit",
-		    "style" : {
-				"navigationStyle": "custom"
-		   }  
+		  "path" : "pages/edit/edit",
+		  "style": {
+		  	"navigationBarTitleText": "添加日记",
+		  	"navigationBarTextStyle": "black",
+		  	"navigationBarBackgroundColor": "#ffffff"
+		  }
 		}
     ],
 	"globalStyle": {

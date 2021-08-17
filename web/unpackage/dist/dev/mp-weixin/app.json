@@ -1,9 +1,10 @@
 {
   "pages": [
-    "pages/edit/edit",
     "pages/login/login",
+    "pages/index/index",
+    "pages/test/test",
     "pages/home/home",
-    "pages/test/test"
+    "pages/edit/edit"
   ],
   "subPackages": [],
   "window": {
@@ -12,5 +13,6 @@
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
 }

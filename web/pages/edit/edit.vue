@@ -2,12 +2,12 @@
 	<view class="container">
 		<view class="main">
 			<view class="header">
-					<xCaption 
+					<!-- <xCaption 
 						v-on:isReturn="clickReturn"
 						:isReturn="true" 
 						:isShare="false" 
 						:title="title" 
-						:isShowline="true"></xCaption>
+						:isShowline="true"></xCaption> -->
 					<input
 						v-model="docTitle"
 						@input="onTitleInput"
@@ -16,15 +16,25 @@
 					<view class="line"></view>
 			</view>
 
-			<textarea
+			 <textarea
 					class="textarea"
+					:show-confirm-bar="false"
 					placeholder="请输入内容"
-					cursor-spacing="100px"
+					maxlength="1000000"
 					v-model="docContent"
 					>
 					
 			</textarea>
 			
+			<!--  #ifdef  %MP-WEIXIN% -->
+			<cover-image
+				@click="addOrUpdate()"
+				class="optionLogo"
+				src="../../static/addlogo.png"
+				>
+				
+			</cover-image>
+			<!--  #endif -->
 			<view class="option-button">
 				<buttonOption 
 					v-on:add="add"
@@ -38,8 +48,8 @@
 </template>
 
 <script>
-	import xCaption from '@/components/x-caption.vue';
-	import buttonOption from '@/components/x-buttonOption.vue';
+	import xCaption from '@/components/caption.vue';
+	import buttonOption from '@/components/buttonOption.vue';
 	import {Http} from '@/utils/http.js'
 	export default {
 		data() {
@@ -67,9 +77,30 @@
 			 }
 		},
 		methods: {
+			addOrUpdate(){
+				var that=this
+				uni.showModal({
+					content:'确定保存文档？',
+					confirmText:'确定',
+					cancelText:'取消',
+					confirmColor:'#72A5E8',
+					success:function(res){
+						if(res.confirm){
+							that.updateContent()
+						}else{
+							console.log('取消')
+						}
+					}
+				})
+			
+			},
 			onTitleInput:function(event){
 				this.docTitle=event.target.value
-				console.log(this.docTitle)
+				
+			},
+			onDocInput:function(event){
+				console.log(event.target.value)
+				// this.docContent=event.target.value
 			},
 			clickReturn(){
 				console.log('点击返回')
@@ -90,10 +121,7 @@
 					}
 				})
 			},
-			add:async function(){
-				console.log("add")
-				console.log('文章内容:'+this.docContent)
-				console.log('文章标题:'+this.docTitle)
+			updateContent:async function(){
 				if(this.currentIsUpdate){
 					//将数据添加到数据库中
 					this.result.title=this.docTitle
@@ -119,6 +147,12 @@
 						url:'../home/home'
 					})
 				}
+			},
+			add:async function(){
+				console.log("add")
+				console.log('文章内容:'+this.docContent)
+				console.log('文章标题:'+this.docTitle)
+				this.updateContent()
 			},
 			recycle:async function(){
 				//删除文章
@@ -157,10 +191,11 @@
 
 	.header{
 		width: 100%;
-		display: flex;
+		height: 100rpx;
 		z-index: 1;
 		flex-direction: column;
 		margin-bottom: 8rpx;
+	
 		.input-title{
 			font-size: 38rpx;
 			color: #191919;
@@ -179,26 +214,25 @@
 		}
 	}
 
-
-
-
-	// .edit{
-	// 	width: 100%;
-	// 	height: 100%;
-	// 	overflow: scroll;
-	// 	display: flex;
-	// 	margin-top: 16rpx;
+		.option-button{
+			z-index: 10;
+		}
 		
 		.textarea{
-			
-			overflow:hidden;
+			overflow: hidden;
 			width: 100%;
 			height: 100%;
 			width:675rpx ;
 			margin:0 auto;
 			flex: 1;
 		}
-	
-	// }
+	.optionLogo{
+		border-radius: 600rpx;	
+		width: 88rpx;
+		height: 88rpx;
+		position: absolute;
+		bottom: 77rpx;
+		right: 52rpx;
+	}
 	
 </style>

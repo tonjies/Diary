@@ -25,7 +25,7 @@
 </template>
 
 <script>
-	import xCaption from '@/components/x-caption.vue';
+	import xCaption from '@/components/caption.vue';
 	import store from '@/store/index.js'   
 	import {Http} from '@/utils/http.js'
 	export default {
@@ -72,7 +72,7 @@
 						     console.log('保存token成功');
 						}
 					})
-					uni.navigateTo({
+					uni.reLaunch({
 						url:'../home/home'
 					})
 				}else{

@@ -1,0 +1,1 @@
+<view><view>{{"数量:"+count}}</view><button data-event-opts="{{[['tap',[['addCount',['$event']]]]]}}" bindtap="__e">增加</button></view>

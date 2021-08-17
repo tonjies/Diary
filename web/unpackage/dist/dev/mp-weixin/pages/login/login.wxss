@@ -24,7 +24,7 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.container.data-v-b237504c {
+.main.data-v-b237504c {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -33,7 +33,7 @@
   -webkit-flex-direction: column;
           flex-direction: column;
 }
-.container .title.data-v-b237504c {
+.main .title-hint.data-v-b237504c {
   margin-top: 31rpx;
   margin-left: 63rpx;
   color: #191919;
@@ -41,26 +41,25 @@
   font-weight: bold;
   margin-bottom: 104rpx;
 }
-.container .ly-input.data-v-b237504c {
+.main .edit.data-v-b237504c {
   margin-left: 63rpx;
+  font-size: 32rpx;
 }
-.container .ly-input .tv-user.data-v-b237504c {
+.main .edit .tv-user.data-v-b237504c {
   color: #191919;
-  font-size: 29rpx;
   font-weight: bold;
 }
-.container .ly-input .uni-input-input.data-v-b237504c {
-  margin-top: 10rpx;
-  font-size: 29rpx !important;
-  margin-bottom: 19rpx;
-}
-.container .ly-input .line.data-v-b237504c {
+.main .edit .line.data-v-b237504c {
+  margin-top: 5rpx;
   height: 1rpx;
   width: 613rpx;
   background-color: #E2E3E4;
   margin-bottom: 21rpx;
 }
-.container .ly-button.data-v-b237504c {
+.main .edit .user.data-v-b237504c {
+  height: 70rpx;
+}
+.main .affirm.data-v-b237504c {
   height: 63rpx;
   display: -webkit-box;
   display: -webkit-flex;
@@ -74,13 +73,13 @@
           align-items: center;
   margin-top: 43rpx;
 }
-.container .ly-button .hintTitle.data-v-b237504c {
+.main .affirm .title.data-v-b237504c {
   margin-left: 63rpx;
   color: #45494D;
   font-size: 25rpx;
   font-weight: bold;
 }
-.container .ly-button .insure-button.data-v-b237504c {
+.main .affirm .button.data-v-b237504c {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -95,5 +94,8 @@
   background-color: #F7F7F7;
   font-size: 29rpx;
   color: #D6D6D7;
+}
+.main .affirm .dark.data-v-b237504c {
+  background-color: #282C35;
 }
 

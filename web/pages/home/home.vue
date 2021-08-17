@@ -2,6 +2,9 @@
 	<view class="container">
 		<view class="main">
 			<view class="header">
+				<view class="status-height">
+				<!-- 这里是状态栏 -->
+				</view>
 				<xCaption 
 					 :title="title"
 					 :isShowLogo="true"
@@ -74,11 +77,11 @@
 	 * 侧滑抽屉
 	 * https://ext.dcloud.net.cn/plugin?id=26
 	 */
-	// 
+
 	import {Http} from '@/utils/http.js'
 	import data from '@/api/data'
-	import xCaption from '@/components/x-caption.vue';
-	import buttonOption from '@/components/x-buttonOption.vue';
+	import xCaption from '@/components/caption.vue';
+	import buttonOption from '@/components/buttonOption.vue';
 	import minModal from '@/components/min-modal/min-modal'
 	import { mapState } from 'vuex'//引入mapState
 	import store from '@/store/index.js'//需要引入store
@@ -320,6 +323,9 @@
 	}
 
 	
-
+	.status-height{
+		height:var(--status-bar-height);
+		width: 100%;
+	}
 	
 </style>

@@ -1,6 +1,9 @@
 {
-  "navigationStyle": "custom",
+  "navigationBarTitleText": "添加日记",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#ffffff",
   "usingComponents": {
-    "x-caption": "/components/x-caption"
+    "x-caption": "/components/caption",
+    "button-option": "/components/buttonOption"
   }
 }

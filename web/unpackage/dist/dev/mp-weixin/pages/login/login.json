@@ -1,6 +1,6 @@
 {
   "navigationStyle": "custom",
   "usingComponents": {
-    "x-caption": "/components/x-caption"
+    "x-caption": "/components/caption"
   }
 }

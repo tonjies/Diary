@@ -4,23 +4,28 @@
     "ignore": []
   },
   "setting": {
-    "urlCheck": false 
+    "urlCheck": false,
+    "es6": true
   },
   "compileType": "miniprogram",
   "libVersion": "",
-  "appid": "touristappid",
+  "appid": "wxfe7f81c91087c646",
   "projectname": "xiaji",
   "condition": {
     "search": {
+      "current": -1,
       "list": []
     },
     "conversation": {
+      "current": -1,
       "list": []
     },
     "game": {
+      "current": -1,
       "list": []
     },
     "miniprogram": {
+      "current": 0,
       "list": [
         {
           "name": "",

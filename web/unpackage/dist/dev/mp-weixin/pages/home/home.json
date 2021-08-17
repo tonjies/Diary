@@ -2,6 +2,7 @@
   "navigationStyle": "custom",
   "usingComponents": {
     "uni-drawer": "/uni_modules/uni-drawer/components/uni-drawer/uni-drawer",
-    "x-caption": "/components/x-caption"
+    "x-caption": "/components/caption",
+    "button-option": "/components/buttonOption"
   }
 }
