@@ -27,7 +27,7 @@ class DocumentController extends Controller {
     }
 
     /**
-     * 根据什锦锉对文档顺序进行排序
+     * 根据时间戳对文档顺序进行排序
      */
     async bSort(arr) {
         var len = arr.length;

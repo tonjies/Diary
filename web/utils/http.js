@@ -10,8 +10,8 @@ class Http{
 	}){
 		console.log('发起网络请求')
 		const value = uni.getStorageSync('token');
-		var token=store.state.token 
-		console.log("同步获取到的token:"+token)
+		// var token=store.state.token 
+		// console.log("同步获取到的token:"+token)
 		//请求列表数据
 		var [error, res] = await uni.request({
 			url:`${config.apiBaseUrl}${url}`,

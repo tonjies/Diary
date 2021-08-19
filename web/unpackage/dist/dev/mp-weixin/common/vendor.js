@@ -10096,7 +10096,7 @@ if (hadRuntime) {
 var _index = _interopRequireDefault(__webpack_require__(/*! ../store/index.js */ 11));
 var _config = __webpack_require__(/*! ./config.js */ 23);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}var
 
-Http = /*#__PURE__*/function () {function Http() {_classCallCheck(this, Http);}_createClass(Http, null, [{ key: "request", value: function () {var _request = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee(_ref) {var url, data, value, token, _yield$uni$request, _yield$uni$request2, error, res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
+Http = /*#__PURE__*/function () {function Http() {_classCallCheck(this, Http);}_createClass(Http, null, [{ key: "request", value: function () {var _request = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee(_ref) {var url, data, value, _yield$uni$request, _yield$uni$request2, error, res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
 
 
                 url = _ref.url,
@@ -10104,35 +10104,35 @@ Http = /*#__PURE__*/function () {function Http() {_classCallCheck(this, Http);}_
 
                 console.log('发起网络请求');
                 value = uni.getStorageSync('token');
-                token = _index.default.state.token;
-                console.log("同步获取到的token:" + token);
+                // var token=store.state.token 
+                // console.log("同步获取到的token:"+token)
                 //请求列表数据
-                _context.next = 7;return uni.request({
+                _context.next = 5;return uni.request({
                   url: "".concat(_config.config.apiBaseUrl).concat(url),
                   data: data,
                   method: 'POST',
                   header: {
-                    'token': value } });case 7:_yield$uni$request = _context.sent;_yield$uni$request2 = _slicedToArray(_yield$uni$request, 2);error = _yield$uni$request2[0];res = _yield$uni$request2[1];
+                    'token': value } });case 5:_yield$uni$request = _context.sent;_yield$uni$request2 = _slicedToArray(_yield$uni$request, 2);error = _yield$uni$request2[0];res = _yield$uni$request2[1];
 
 
                 console.log(res);if (!
-                res.data.status) {_context.next = 16;break;}return _context.abrupt("return",
-                res.data);case 16:if (!(
+                res.data.status) {_context.next = 14;break;}return _context.abrupt("return",
+                res.data);case 14:if (!(
 
-                res.data.code == 401)) {_context.next = 20;break;}
+                res.data.code == 401)) {_context.next = 18;break;}
                 console.log('token失效');
                 uni.navigateTo({
-                  url: '../login/login' });return _context.abrupt("return");case 20:
+                  url: '../login/login' });return _context.abrupt("return");case 18:
 
 
 
                 uni.showToast({
                   title: '请求失败',
-                  msg: res.data.msg });return _context.abrupt("return");case 22:return _context.abrupt("return",
+                  msg: res.data.msg });return _context.abrupt("return");case 20:return _context.abrupt("return",
 
 
 
-                res.data);case 23:case "end":return _context.stop();}}}, _callee);}));function request(_x) {return _request.apply(this, arguments);}return request;}() }]);return Http;}();exports.Http = Http;
+                res.data);case 21:case "end":return _context.stop();}}}, _callee);}));function request(_x) {return _request.apply(this, arguments);}return request;}() }]);return Http;}();exports.Http = Http;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
