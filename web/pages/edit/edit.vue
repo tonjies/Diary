@@ -121,7 +121,7 @@
 					}
 				})
 			},
-			updateContent:async function(){
+			  updateContent:async function(){
 				if(this.currentIsUpdate){
 					//将数据添加到数据库中
 					this.result.title=this.docTitle

@@ -24,7 +24,7 @@ class DocumentController extends Controller {
             console.log(e)
             ctx.returnBody(true, {}, "获取文档失败",9999);
         }
-    }
+    }getArticleList
 
     /**
      * 根据时间戳对文档顺序进行排序
